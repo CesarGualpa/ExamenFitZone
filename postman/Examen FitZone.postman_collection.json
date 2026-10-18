@@ -1,0 +1,138 @@
+{
+  "info": {
+    "_postman_id": "5b0a69c9-5da3-4da7-963b-a702a6429777",
+    "name": "Examen FitZone",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "56637168",
+    "_collection_link": "https://go.postman.co/collection/56637168-5b0a69c9-5da3-4da7-963b-a702a6429777?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Crear Socio",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"nombres\": \"Andres\",\r\n    \"apellidos\": \"Perez\",\r\n    \"edad\": 22,\r\n    \"activo\": true\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/socios",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "socios"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Crear un inactivo",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"nombres\": \"Maria\",\r\n    \"apellidos\": \"Lopez\",\r\n    \"edad\": 28,\r\n    \"activo\": false\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/socios",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "socios"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET general",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/socios",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "socios"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET activos",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/socios/estado?activo=true",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "socios",
+            "estado"
+          ],
+          "query": [
+            {
+              "key": "activo",
+              "value": "true"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET inactivos",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/socios/estado?activo=false",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "socios",
+            "estado"
+          ],
+          "query": [
+            {
+              "key": "activo",
+              "value": "false"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
